@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lear_xml:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>lear_xml</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="lear_xml-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="lear_xml:war exploded" />
+    </root>
+  </artifact>
+</component>

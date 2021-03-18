@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>a</servlet-name>
+		<servlet-class>com.example.lear_xml.A</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>a</servlet-name>
+		<url-pattern>testa</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>b</servlet-name>
+		<servlet-class>com.example.lear_xml.B</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>b</servlet-name>
+		<url-pattern>testb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>c</servlet-name>
+		<servlet-class>com.example.lear_xml.C</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>c</servlet-name>
+		<url-pattern>testc</url-pattern>
+	</servlet-mapping>
+</web-app>
