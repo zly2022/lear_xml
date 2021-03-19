@@ -13,24 +13,27 @@
 </head>
 <body>
 <%List<Phone> phone = (List<Phone>) request.getAttribute("phone");%>
-<%if(phone.size()==0){%>
+<%if (phone.size() == 0) {%>
 <span style="color: red">暂时没有货物</span>
-<%}else{%>
-    <table>
-        <%
-            for (Phone p:phone
-                 ) {
-                %>
-        <tr>
-            <td><%=p.getId()%></td>
-            <td><%=p.getName()%></td>
-            <td><%=p.getPrice()%></td>
-            <td><%=p.getMs()%></td>
-            <td>操作</td>
-        </tr>
-        <%}%>
-    </table>
-
+<%} else {%>
+<table border="1px" cellpadding="0" cellspacing="0">
+    <%
+        for (Phone p : phone
+        ) {
+    %>
+    <tr>
+        <td><%=p.getId()%>
+        </td>
+        <td><%=p.getName()%>
+        </td>
+        <td><%=p.getPrice()%>
+        </td>
+        <td><%=p.getMs()%>
+        </td>
+        <td><a href="update?id=<%=p.getId()%>&flg=1">修改</a></td>
+    </tr>
+    <%}%>
+</table>
 <%}%>
 </body>
 </html>

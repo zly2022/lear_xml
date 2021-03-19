@@ -9,6 +9,10 @@ public class Phone {
     public Phone() {
     }
 
+    public Phone(Integer id) {
+        this.id = id;
+    }
+
     public Phone(Integer id, String name, Double price, String ms) {
         this.id = id;
         this.name = name;

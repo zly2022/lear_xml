@@ -5,6 +5,7 @@ import com.dao.TuserDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,6 +25,16 @@ public class LoginServlet extends HttpServlet {
             if(s.getName().equals(name)&&s.getPassword().equals(password)){
                 req.setAttribute("name",name);
                 req.setAttribute("password",password);
+                //创建Cookie对象
+                Cookie c1 = new Cookie("username",name);
+                Cookie c2 = new Cookie("password",password);
+                //设置Cookie保存时间(单位:秒)
+                c1.setMaxAge(60);
+                c2.setMaxAge(60);
+                //通过响应对象添加到客户端
+                resp.addCookie(c1);
+                resp.addCookie(c2);
+
                 req.getRequestDispatcher("show").forward(req,resp);
             }
         }
